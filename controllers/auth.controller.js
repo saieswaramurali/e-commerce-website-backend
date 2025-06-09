@@ -164,7 +164,7 @@ export const ForgotPassword = async (req, res) => {
     );
 
     // Create URL
-    const resetLink = `https://e-commerce-website-frontend.vercel.app/reset-password/${token}`;
+    const resetLink = `https://e-commerce-website-frontend-smoky.vercel.app/reset-password/${token}`;
 
     // Send email
     const transporter = nodemailer.createTransport({
@@ -263,7 +263,7 @@ export const adminLogin = async (req, res) => {
     res.status(200).json({
       message: 'Login successful',
       token,
-      dashboardUrl: `https://e-commerce-website-frontend.vercel.app/admin/dashboard?token=${token}`,
+      dashboardUrl: `https://e-commerce-website-frontend-smoky.vercel.app/admin/dashboard?token=${token}`,
       user: {
         id: user._id,
         name: user.name,
