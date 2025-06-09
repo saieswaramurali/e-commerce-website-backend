@@ -164,7 +164,7 @@ export const ForgotPassword = async (req, res) => {
     );
 
     // Create URL
-    const resetLink = `http://localhost:5173/reset-password/${token}`;
+    const resetLink = `https://dl-food-products.onrender.com/reset-password/${token}`;
 
     // Send email
     const transporter = nodemailer.createTransport({
@@ -263,7 +263,7 @@ export const adminLogin = async (req, res) => {
     res.status(200).json({
       message: 'Login successful',
       token,
-      dashboardUrl: `http://localhost:3000/admin/dashboard?token=${token}`,
+      dashboardUrl: `https://dl-food-products.onrender.com/admin/dashboard?token=${token}`,
       user: {
         id: user._id,
         name: user.name,
